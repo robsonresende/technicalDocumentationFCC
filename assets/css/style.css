@@ -1,0 +1,67 @@
+/* StyleSheet CSS for Technical Documentation Page FCC */
+
+body {
+	font-family: Helvetica, Arial;
+	background-color: #ffffff;
+}
+
+ul {
+	list-style-type: square;
+}
+
+code {
+	color: #3333ff;
+}
+
+h4 {
+	color: #ff3333;
+}
+
+#nav-bar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+#nav-bar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+#nav-bar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#nav-bar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+main#main-doc {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  #nav-bar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  #nav-bar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  #nav-bar a {
+    text-align: center;
+    float: none;
+  }
+}

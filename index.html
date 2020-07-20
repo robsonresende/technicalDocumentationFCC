@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Arquivo CSS -->
+    <!--<link rel="stylesheet" href="assets/css/style.css">-->
+
+    <title>Technical Documentation Page FCC</title>
+
+    <style media="all">
+      body {
+  font-family: Helvetica, Arial;
+  background-color: #ffffff;
+}
+
+ul {
+  list-style-type: square;
+}
+
+code {
+  color: #3333ff;
+}
+
+h4 {
+  color: #ff3333;
+}
+
+#navbar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+#navbar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#navbar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+main#main-doc {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  #navbar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  #navbar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  #navbar a {
+    text-align: center;
+    float: none;
+  }
+}
+    </style>
+
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header id="nav-header"><b>git commands</b></header>
+      <a href="#add" class="nav-link">add</a>
+      <a href="#status" class="nav-link">status</a>
+      <a href="#diff" class="nav-link">diff</a>
+      <a href="#commit" class="nav-link">commit</a>
+      <a href="#reset" class="nav-link">reset</a>
+    </nav>
+
+    <main id="main-doc">
+
+      <section class="main-section" id="add">
+        <header>
+          <code><b>add</b></code>
+        </header>
+
+
+        <p><b>git add</b></p>
+        <p>Add file contents to the index</p>
+
+        <h4>OPTIONS</h4>
+
+        <ul>
+          <li>-n - Don’t actually add the file(s), just show if they exist and/or will be ignored.</li>
+          <li>-b - Be verbose.</li>
+          <li>-f - Allow adding otherwise ignored files.</li>
+          <li>-i - Add modified contents in the working tree interactively to the index. </li>
+          <li>-p - Interactively choose hunks of patch between the index and the work tree and add them to the index. </li>
+        </ul>
+      
+        <hr align="center" width="100%" size="1" color="#3333ff">
+
+      </section>
+
+      <section class="main-section" id="status">
+        <header>
+          <code><b>status</b></code>
+        </header>
+
+        <p><b>git status</b></p>
+        <p>Show the working tree status</p>
+
+        <h4>OPTIONS</h4>
+
+        <ul>
+          <li>-s - Give the output in the short-format.</li>
+          <li>-b - Show the branch and tracking info even in short-format.</li>
+          <li>--show-stash - Show the number of entries currently stashed away.</li>
+          <li>--long - Give the output in the long-format. This is the default.</li>
+          <li>-v - In addition to the names of files that have been changed, </li>
+        </ul>
+
+        <hr align="center" width="100%" size="1" color="#3333ff">
+      
+      </section>
+
+      <section class="main-section" id="diff">
+        <header>
+          <code><b>diff</b></code>
+        </header>
+
+        <p><b>git diff</b></p>
+        <p>Show changes between commits, commit and working tree, etc</p>
+
+        <h4>OPTIONS</h4>
+
+        <ul>
+          <li>--patch - Generate patch (see section on generating patches). This is the default.</li>
+          <li>--no-patch - Suppress diff output.</li>
+          <li>--unified - Generate diffs with 'n' lines of context instead of the usual three.</li>
+          <li>--output - Output to a specific file instead of stdout.</li>
+          <li>--raw - Generate the diff in raw format.</li>
+        </ul>
+
+        <hr align="center" width="100%" size="1" color="#3333ff">
+      
+      </section>
+
+      <section class="main-section" id="commit">
+        <header>
+          <code><b>commit</b></code>
+        </header>
+
+        <p><b>git commit</b></p>
+        <p>Record changes to the repository</p>
+
+        <h4>OPTIONS</h4>
+
+        <ul>
+          <li>-a - Tell the command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.</li>
+          <li>-p - Use the interactive patch selection interface to chose which changes to commit. See git-add[1] for details.</li>
+          <li>-c - Like -C, but with -c the editor is invoked, so that the user can further edit the commit message.</li>
+          <li>-m - Use the given 'msg' as the commit message.</li>
+        </ul>
+
+        <hr align="center" width="100%" size="1" color="#3333ff">
+      
+      </section>
+
+      <section class="main-section" id="reset">
+        <header>
+          <code><b>reset</b></code>
+        </header>
+
+        <p><b>git reset</b></p>
+        <p>Reset current HEAD to the specified state</p>
+
+        <h4>OPTIONS</h4>
+
+        <ul>
+          <li>-q - Be quiet, only report errors.</li>
+          <li>--pathspec-from-file - Pathspec is passed in 'file' instead of commandline args.</li>
+          <li>--pathspec-file-nul - Only meaningful with --pathspec-from-file.</li>
+          <li>-- - Do not interpret any more arguments as options.</li>
+          <li>pathspec - Limits the paths affected by the operation.</li>
+        </ul>
+      
+        <hr align="center" width="100%" size="1" color="#3333ff">
+
+      </section>
+
+      
+
+    </main><!--FINAL DA TAG MAIN ------ -->
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
